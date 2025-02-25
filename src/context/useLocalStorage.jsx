@@ -6,13 +6,13 @@ const useLocalStorage = (itemName, initialValue)=>{
 
     React.useEffect(()=>{
 
-        const localStorateItem = localStorage.getItem(itemName);
+        const localStorageItem = localStorage.getItem(itemName);
         let parsedItem;
-        if(!localStorateItem){
-            localStorateItem.setItem(itemName, JSON.stringify(initialValue));
+        if(!localStorageItem){
+            localStorage.setItem(itemName, JSON.stringify(initialValue));
             parsedItem = initialValue
         }else{
-            parsedItem = JSON.parse(localStorateItem)
+            parsedItem = JSON.parse(localStorageItem)
             setItem(parsedItem)
         }
 
@@ -28,3 +28,5 @@ const useLocalStorage = (itemName, initialValue)=>{
         saveItem
     }
 }
+
+export {useLocalStorage}
