@@ -6,22 +6,6 @@ import { CreateContact } from '../components/CreateContact';
 import { ContactContext } from '../context/ContactContext';
 
 function AppUI() {
-  // const [count, setCount] = useState(0);
-
-  // Cargar el valor del contador desde localStorage al iniciar la aplicación
- /*  useEffect(() => {
-    const savedCount = localStorage.getItem("count");
-    if (savedCount) {
-      setCount(JSON.parse(savedCount));
-    }
-  }, []);
-
-  // Función para guardar el nuevo valor en localStorage
-  const saveCount = (newCount) => {
-    localStorage.setItem("count", JSON.stringify(newCount));
-    setCount(newCount);
-  };
- */
 
   // const defaultContacts = [
   //   {contactNumber: "3113758380", nameContact: "Mila"},
