@@ -1,9 +1,14 @@
 import React from "react";
 import { CreateContact } from "./CreateContact";
+import { ContactContext } from "../context/ContactContext";
 
 function ContactForm() {
+  const { addContact } = React.useContext(ContactContext);
+
+  const [newContactValue, setContactValue] = React.useState("");
+
   return (
-    <div className="flex items-center flex-col border-amber-50 rounded-2xl w-1/2 p-3">
+    <form className="flex items-center flex-col border-amber-50 rounded-2xl w-1/2 p-3">
       <input
         className="border-amber-50 text-black my-3 bg-white rounded-2xl w-full text-center"
         type="text"
@@ -14,8 +19,8 @@ function ContactForm() {
         type="text"
         placeholder="Ingresa nuevo numero"
       />
-      <CreateContact />
-    </div>
+      <CreateContact type="submit" />
+    </form>
   );
 }
 
