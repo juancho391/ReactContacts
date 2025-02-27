@@ -2,8 +2,8 @@ import React from 'react';
 import { Contact } from '../components/Contact';
 import { ContactList } from '../components/ContactList';
 import { SearchContact } from '../components/SearchContact';
-import { CreateContact } from '../components/CreateContact';
 import { ContactContext } from '../context/ContactContext';
+import { ContactForm } from '../components/ContactForm';
 
 function AppUI() {
 
@@ -36,7 +36,7 @@ function AppUI() {
           onDelete={()=> deleteContact(contact.nameContact)}/>
         ))}
       </ContactList>
-      <CreateContact/>
+      <ContactForm/>
     </>
   );
 }
