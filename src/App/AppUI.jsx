@@ -19,7 +19,8 @@ function AppUI() {
   const {
     searchContacts,
     searchValue,
-    setSearchValue
+    setSearchValue,
+    deleteContact
   } = React.useContext(ContactContext)
   return (
     <>
@@ -31,7 +32,8 @@ function AppUI() {
           <Contact 
           key={contact.contactNumber}
           nameContact={contact.nameContact}
-          contactNumber={contact.contactNumber}/>
+          contactNumber={contact.contactNumber}
+          onDelete={()=> deleteContact(contact.nameContact)}/>
         ))}
       </ContactList>
       <CreateContact/>

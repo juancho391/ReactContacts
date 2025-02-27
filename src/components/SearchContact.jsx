@@ -13,7 +13,6 @@ function SearchContact(){
                placeholder="Buscar Contacto" 
                value={searchValue} 
                onChange={(event)=>{
-                console.log(event.target.value)
                 setSearchValue(event.target.value);
         }}
          />

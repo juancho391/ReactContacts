@@ -15,12 +15,20 @@ function ContactProvider({ children }) {
     return contact.nameContact.toLowerCase().includes(searchValue.toLowerCase());
   });
 
+  const deleteContact = (name) =>{
+    const newContacts = contacts.filter(
+      (contact)=> contact.nameContact !== name
+      );
+      saveContact(newContacts);
+  }
+
   return (
     <ContactContext.Provider
       value={{
         searchContacts,
         searchValue,
         setSearchValue,
+        deleteContact,
       }}
     >
       {children}
