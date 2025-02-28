@@ -6,13 +6,13 @@ import { ContactContext } from "../context/ContactContext";
 import { ContactForm } from "../components/ContactForm";
 
 function AppUI() {
-  const defaultContacts = [
-    { contactNumber: "3113758380", nameContact: "Mila" },
-    { contactNumber: "3117079075", nameContact: "JuanB" },
-    { contactNumber: "3002055793", nameContact: "JuanV" },
-  ];
+  // const defaultContacts = [
+  //   { contactNumber: "3113758380", nameContact: "Mila" },
+  //   { contactNumber: "3117079075", nameContact: "JuanB" },
+  //   { contactNumber: "3002055793", nameContact: "JuanV" },
+  // ];
 
-  localStorage.setItem("CONTACTS_V1", JSON.stringify(defaultContacts));
+  // localStorage.setItem("CONTACTS_V1", JSON.stringify(defaultContacts));
 
   const { searchContacts, searchValue, setSearchValue, deleteContact } =
     React.useContext(ContactContext);
