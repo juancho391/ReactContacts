@@ -27,8 +27,16 @@ function ContactProvider({ children }) {
     saveContact(newContacts);
   };
 
-  const addContact = (event) => {
-    console.log("Agregando Contact con funcion");
+  const addContact = (nameContact, contactNumber) => {
+    console.log("Ejecutando fucion addContact");
+    const newContact = {
+      contactNumber,
+      nameContact,
+    };
+    const newContacts = [...contacts];
+    newContacts.push(newContact);
+    // console.log(newContacts);
+    saveContact(newContacts);
   };
 
   return (
