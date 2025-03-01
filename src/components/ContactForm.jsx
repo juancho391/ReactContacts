@@ -16,7 +16,6 @@ function ContactForm() {
 
   const onSubmit = (event) => {
     event.preventDefault();
-    console.log("Ejecutando funcion onSubmit");
     addContact(newNameValue, newNumberValue);
   };
 

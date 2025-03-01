@@ -28,7 +28,6 @@ function ContactProvider({ children }) {
   };
 
   const addContact = (nameContact, contactNumber) => {
-    console.log("Ejecutando fucion addContact");
     const newContact = {
       contactNumber,
       nameContact,
