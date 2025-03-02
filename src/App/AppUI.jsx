@@ -4,6 +4,7 @@ import { ContactList } from "../components/ContactList";
 import { SearchContact } from "../components/SearchContact";
 import { ContactContext } from "../context/ContactContext";
 import { ContactForm } from "../components/ContactForm";
+import { EmptyContacts } from "../components/EmptyContacts";
 
 function AppUI() {
   // const defaultContacts = [
@@ -21,6 +22,7 @@ function AppUI() {
       <h1 className="text-white py-1 my-3">Welcome to my ContactsApp</h1>
       <SearchContact />
       <ContactList>
+        {searchContacts.length === 0 && <EmptyContacts />}
         {searchContacts.map((contact) => (
           <Contact
             key={contact.contactNumber}
